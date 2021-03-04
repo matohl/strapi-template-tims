@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mediums",
+  "info": {
+    "name": "Medium",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "medium": {
+      "type": "string"
+    },
+    "automations": {
+      "via": "mediums",
+      "collection": "automation"
+    }
+  }
+}

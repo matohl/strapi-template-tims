@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "countries",
+  "info": {
+    "name": "Country",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "automations": {
+      "via": "countries",
+      "collection": "automation"
+    },
+    "children": {
+      "collection": "destination",
+      "via": "parent"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "destinations",
+  "info": {
+    "name": "Destination",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "automations": {
+      "via": "destinations",
+      "collection": "automation"
+    },
+    "parent": {
+      "via": "children",
+      "model": "country"
+    },
+    "children": {
+      "via": "parent",
+      "collection": "resort"
+    }
+  }
+}

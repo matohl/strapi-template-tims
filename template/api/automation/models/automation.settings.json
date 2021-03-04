@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "automations",
+  "info": {
+    "name": "Automation",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "Activation": {
+      "type": "datetime"
+    },
+    "Archiving": {
+      "type": "datetime"
+    },
+    "Content": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content-category.content"
+    },
+    "mediums": {
+      "collection": "medium",
+      "via": "automations",
+      "dominant": true
+    },
+    "brands": {
+      "collection": "brand",
+      "via": "automations",
+      "dominant": true
+    },
+    "countries": {
+      "collection": "country",
+      "via": "automations",
+      "dominant": true
+    },
+    "destinations": {
+      "collection": "destination",
+      "via": "automations",
+      "dominant": true
+    },
+    "author": {
+      "type": "email"
+    },
+    "automationName": {
+      "type": "enumeration",
+      "enum": [
+        "Arrival",
+        "CoronaInfo",
+        "Farewell",
+        "Welcome"
+      ]
+    },
+    "resorts": {
+      "collection": "resort",
+      "via": "automations",
+      "dominant": true
+    },
+    "hotels": {
+      "collection": "hotel",
+      "via": "automations",
+      "dominant": true
+    }
+  }
+}

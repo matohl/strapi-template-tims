@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "resorts",
+  "info": {
+    "name": "Resort"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "parent": {
+      "model": "destination",
+      "via": "children"
+    },
+    "children": {
+      "via": "parent",
+      "collection": "hotel"
+    },
+    "automations": {
+      "via": "resorts",
+      "collection": "automation"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enkels",
+  "info": {
+    "name": "Enkel"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
